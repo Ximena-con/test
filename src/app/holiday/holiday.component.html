@@ -1,0 +1,14 @@
+
+
+  <div class="calendarColumn">
+        <nz-date-picker 
+        [nzDateRender]='telRender'
+          nzInline
+         [(ngModel)]="January" 
+         [nzShowToday]='false'
+        ></nz-date-picker>
+
+        <ng-template #telRender let-current>
+            <div class="ant-picker-cell-inner" [class.bg-green]='getColor(current)'>{{current.getDate()}}</div>
+        </ng-template>
+      </div>
